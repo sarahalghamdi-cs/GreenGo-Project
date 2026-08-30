@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compare Packages</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+GreenGo
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="package.html">Package</a>
+
+<a href="choice.html">Choice</a>
+
+<a href="booking.html">Booking</a>
+
+<a href="compare.html">Compare</a>
+
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<!-- TITLE -->
+
+<section class="compare-section">
+
+<h1 class="compare-title">
+Choose Your Perfect Trip
+</h1>
+
+<p class="compare-subtitle">
+Compare prices and services
+</p>
+
+<!-- CARDS -->
+
+<div class="compare-cards">
+
+<!-- BALI -->
+
+<div class="trip-card">
+
+<img src="images/pali.jpg"
+alt="Bali"
+onclick="showInfo(this)">
+
+<div class="trip-info">
+
+<h2>Bali Adventure</h2>
+
+<p class="price">1500 SAR</p>
+
+<p>
+Best for adventure lovers and nature activities.
+</p>
+
+<a href="choice.html">
+
+<button>
+Choose Trip
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- SWISS -->
+
+<div class="trip-card">
+
+<img src="images/Switzerland.jpg"
+alt="Switzerland"
+onclick="showInfo(this)">
+
+<div class="trip-info">
+
+<h2>Swiss Nature</h2>
+
+<p class="price">2200 SAR</p>
+
+<p>
+Perfect for relaxing mountains and cold weather.
+</p>
+
+<a href="choice.html">
+
+<button>
+Choose Trip
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- MALDIVES -->
+
+<div class="trip-card">
+
+<img src="images/Maldives.jpg"
+alt="Maldives"
+onclick="showInfo(this)">
+
+<div class="trip-info">
+
+<h2>Maldives Escape</h2>
+
+<p class="price">3000 SAR</p>
+
+<p>
+Luxury beach experience and peaceful vibes.
+</p>
+
+<a href="choice.html">
+
+<button>
+Choose Trip
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>Email: info@greengo.com</p>
+
+<p>Phone: 0500000000</p>
+
+<p>Location: Saudi Arabia</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function showInfo(image){
+
+let info = image.nextElementSibling;
+
+if(info.style.display === "block"){
+
+info.style.display = "none";
+
+}else{
+
+info.style.display = "block";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

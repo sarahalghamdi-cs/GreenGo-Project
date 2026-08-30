@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking</title>
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+GreenGo
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="package.html">Package</a>
+<a href="choice.html">Choice</a>
+<a href="booking.html">Booking</a>
+<a href="compare.html">Compare</a>
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<!-- BOOKING SECTION -->
+
+<section class="booking-section">
+
+<form id="bookingForm" class="booking-form">
+
+<h2>Custom Booking</h2>
+
+<div class="form-grid">
+
+<input type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<input type="number"
+id="travelers"
+placeholder="Number of Travelers"
+required>
+
+<input type="number"
+id="days"
+placeholder="Number of Days"
+required>
+
+<input type="date"
+id="date"
+required>
+
+</div>
+
+<!-- PRICE -->
+
+<div class="price-box">
+
+Total Price:
+<span id="totalPrice">
+0
+</span>
+SAR
+
+</div>
+
+<button type="submit">
+Confirm Booking
+</button>
+
+<p id="message"></p>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>Email: info@greengo.com</p>
+
+<p>Phone: 0500000000</p>
+
+<p>Location: Saudi Arabia</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+let selectedPrice = localStorage.getItem("tripPrice");
+
+if(!selectedPrice){
+selectedPrice = 1500;
+}
+
+const travelersInput = document.getElementById("travelers");
+const daysInput = document.getElementById("days");
+const totalPrice = document.getElementById("totalPrice");
+
+function calculatePrice(){
+
+let travelers = travelersInput.value;
+let days = daysInput.value;
+
+if(travelers && days){
+
+let total = selectedPrice * travelers * days;
+
+totalPrice.innerText = total;
+
+}
+
+}
+
+travelersInput.addEventListener("input", calculatePrice);
+
+daysInput.addEventListener("input", calculatePrice);
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+document.getElementById("message").innerHTML =
+"✅ Your booking has been confirmed!";
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Packages</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+GreenGo
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="package.html">Package</a>
+<a href="choice.html">Choice</a>
+<a href="booking.html">Booking</a>
+<a href="compare.html">Compare</a>
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<!-- PAGE TITLE -->
+
+<section>
+
+<h1 style="text-align:center;">Travel Packages</h1>
+
+<p style="text-align:center;">
+Explore our eco-friendly travel experiences
+</p>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section class="packages">
+
+<!-- CARD 1 -->
+
+<div class="travel-package">
+
+<img src="images/adventure.jpg" alt="Bali">
+
+<div class="package-content">
+
+<h2>Bali Adventure</h2>
+
+<p>5 Days Trip</p>
+
+<p class="price">1500 SAR</p>
+
+<button onclick="bookNow('Bali Adventure')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="travel-package">
+
+<img src="images/Nature.jpg" alt="Swiss">
+
+<div class="package-content">
+
+<h2>Swiss Nature</h2>
+
+<p>7 Days Trip</p>
+
+<p class="price">2200 SAR</p>
+
+<button onclick="bookNow('Swiss Nature')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="travel-package">
+
+<img src="images/hotel.jpg" alt="Maldives">
+
+<div class="package-content">
+
+<h2>Maldives Escape</h2>
+
+<p>6 Days Trip</p>
+
+<p class="price">3000 SAR</p>
+
+<button onclick="bookNow('Maldives Escape')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>Email: info@greengo.com</p>
+
+<p>Phone: 0500000000</p>
+
+<p>Location: Saudi Arabia</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function bookNow(packageName){
+
+alert("Your booking for " + packageName + " has been confirmed!");
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
